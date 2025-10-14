@@ -64,7 +64,7 @@ async function fetchAllStarredRepos() {
 
 function generateProjectHTML(repos) {
   return repos
-    .filter(repo => !repo.fork && !repo.archived)
+    .filter(repo => !repo.fork && !repo.archived && repo.owner.login === GITHUB_USERNAME)
     .sort((a, b) => new Date(b.starred_at || b.created_at) - new Date(a.starred_at || a.created_at))
     .map(repo => {
       const description = repo.description || 'No description available';
