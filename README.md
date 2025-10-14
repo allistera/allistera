@@ -1,6 +1,8 @@
 # Personal Homepage
 
-A simple, clean personal homepage showcasing projects and contact information.
+A simple, clean personal homepage for Allister Antosik - Lead SRE with a background in Software Engineering.
+
+The site automatically showcases GitHub starred repositories, updated nightly.
 
 ## Setup
 
@@ -21,3 +23,15 @@ Edit `index.html` to update:
 ## Local Development
 
 Open `index.html` in your browser to preview changes locally.
+
+## Automated Project Updates
+
+The projects section is automatically updated from GitHub starred repositories:
+
+- **Schedule**: Runs daily at midnight UTC
+- **Trigger**: Can also be manually triggered from the Actions tab
+- **Source**: Fetches all starred repositories from GitHub
+- **Filtering**: Automatically excludes forks and archived repositories
+- **Workflow**: `.github/workflows/update-starred-repos.yml`
+
+The workflow commits changes directly to the repository when new starred repos are detected.
