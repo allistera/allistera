@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY || '';
+const GITHUB_USERNAME = GITHUB_REPOSITORY.split('/')[0];
 const API_BASE = 'https://api.github.com';
 
 function httpsGet(url, headers = {}) {
@@ -33,15 +35,19 @@ function httpsGet(url, headers = {}) {
 }
 
 async function fetchAllStarredRepos() {
+  if (!GITHUB_USERNAME) {
+    throw new Error('GITHUB_REPOSITORY environment variable not set');
+  }
+
   const headers = GITHUB_TOKEN ? { 'Authorization': `token ${GITHUB_TOKEN}` } : {};
   let allRepos = [];
   let page = 1;
   let hasMore = true;
 
-  console.log('Fetching starred repositories...');
+  console.log(`Fetching starred repositories for ${GITHUB_USERNAME}...`);
 
   while (hasMore) {
-    const url = `${API_BASE}/user/starred?per_page=100&page=${page}`;
+    const url = `${API_BASE}/users/${GITHUB_USERNAME}/starred?per_page=100&page=${page}`;
     const { data, headers: responseHeaders } = await httpsGet(url, headers);
 
     allRepos = allRepos.concat(data);
