@@ -7,8 +7,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.8;
-    color: #232629;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #1a1a1a;
+    background: #f8f9fa;
     min-height: 100vh;
 }
 
@@ -21,20 +21,19 @@ body {
 header {
     text-align: center;
     padding: 80px 0 60px;
-    color: white;
 }
 
 h1 {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: white;
+    color: #1a1a1a;
     letter-spacing: -1px;
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #6b7280;
     font-weight: 400;
 }
 
@@ -43,15 +42,16 @@ section {
     padding: 50px 40px;
     margin-bottom: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
 }
 
 h2 {
     font-size: 2.2rem;
     margin-bottom: 15px;
-    color: #232629;
+    color: #1a1a1a;
     font-weight: 700;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #d1d5db;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -72,16 +72,16 @@ h2 {
 
 .project-item {
     padding: 25px;
-    background: #f8f9fa;
-    border: 2px solid transparent;
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
-    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #9ca3af;
     background: white;
 }
 
@@ -99,7 +99,7 @@ h2 {
 }
 
 .project-item a {
-    color: #667eea;
+    color: #4b5563;
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
@@ -108,13 +108,12 @@ h2 {
 }
 
 .project-item a:hover {
-    color: #764ba2;
+    color: #1a1a1a;
 }
 
 footer {
     text-align: center;
     padding: 50px 0 30px;
-    color: white;
 }
 
 .social-links {
@@ -125,24 +124,25 @@ footer {
 }
 
 .social-links a {
-    color: white;
+    color: #1a1a1a;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.15);
+    background: white;
+    border: 2px solid #e5e7eb;
     border-radius: 25px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 
 .social-links a:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: #f9fafb;
+    border-color: #9ca3af;
     transform: translateY(-2px);
 }
 
 .copyright {
-    color: rgba(255, 255, 255, 0.8);
+    color: #6b7280;
     font-size: 1rem;
 }
 
