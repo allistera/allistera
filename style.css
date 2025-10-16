@@ -41,7 +41,7 @@ section {
     background: white;
     padding: 50px 40px;
     margin-bottom: 40px;
-    border-radius: 12px;
+    border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
 }
@@ -74,7 +74,7 @@ h2 {
     padding: 25px;
     background: #f9fafb;
     border: 2px solid #e5e7eb;
-    border-radius: 10px;
+    border-radius: 4px;
     transition: all 0.3s ease;
 }
 
@@ -131,7 +131,7 @@ footer {
     padding: 12px 24px;
     background: white;
     border: 2px solid #e5e7eb;
-    border-radius: 25px;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
