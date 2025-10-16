@@ -63,6 +63,32 @@ h2 {
     margin-top: 20px;
 }
 
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f9fafb;
+    color: #1a1a1a;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    background: white;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
