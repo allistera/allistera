@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    # Group all npm updates into a single PR
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+    # Auto-merge compatible with auto-merge workflow
+    labels:
+      - "dependencies"
+      - "automerge"
