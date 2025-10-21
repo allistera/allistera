@@ -42,7 +42,7 @@ section {
     padding: 50px 40px;
     margin-bottom: 40px;
     border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 8%);
     border: 1px solid #e5e7eb;
 }
 
@@ -86,7 +86,7 @@ h2 {
     background: white;
     border-color: #9ca3af;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
 }
 
 .project-list {
@@ -106,7 +106,7 @@ h2 {
 
 .project-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
     border-color: #9ca3af;
     background: white;
 }
@@ -122,19 +122,6 @@ h2 {
     color: #5d5d5d;
     margin-bottom: 15px;
     line-height: 1.6;
-}
-
-.project-item a {
-    color: #4b5563;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    transition: color 0.2s;
-}
-
-.project-item a:hover {
-    color: #1a1a1a;
 }
 
 footer {
@@ -167,12 +154,25 @@ footer {
     transform: translateY(-2px);
 }
 
+.project-item a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.project-item a:hover {
+    color: #1a1a1a;
+}
+
 .copyright {
     color: #6b7280;
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     h1 {
         font-size: 2.5rem;
     }
